@@ -1,0 +1,437 @@
+
+/* =================================
+   1. GENERAL SETTINGS
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #263445;
+    background-color: #f5f7fa;
+    line-height: 1.7;
+}
+
+
+
+/* =================================
+   PROFESSIONAL HEADER
+================================= */
+
+.site-header {
+    background-color: white;
+    padding: 15px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* LOGO */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.logo-ma {
+    background-color: #153b66;
+    color: white;
+    font-size: 27px;
+    font-weight: bold;
+    padding: 10px 13px;
+    border-radius: 8px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    color: #153b66;
+}
+
+.logo-text strong {
+    font-size: 19px;
+}
+
+.logo-text small {
+    font-size: 11px;
+    color: #d49a3a;
+}
+
+/* DESKTOP NAVIGATION */
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.site-nav a {
+    text-decoration: none;
+    color: #263445;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.site-nav a:hover {
+    color: #d49a3a;
+}
+
+/* HAMBURGER BUTTON */
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #153b66;
+    cursor: pointer;
+}
+
+
+/* MOBILE NAVIGATION */
+
+@media (max-width: 700px) {
+
+    .site-header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 20px 0;
+        gap: 18px;
+    }
+
+    .site-nav.open {
+        display: flex;
+    }
+
+}
+
+/* =================================
+   3. HERO SECTION
+================================= */
+
+
+/* =================================
+   HERO SECTION WITH BACKGROUND IMAGE
+================================= */
+
+.hero {
+
+    min-height: 550px;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 35, 60, 0.75),
+            rgba(15, 35, 60, 0.75)
+        ),
+        url("images/hero-classroom.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 70px 10%;
+
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+
+.hero-content {
+    max-width: 750px;
+}
+
+.subtitle {
+    color: #d49a3a;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    font-size: 46px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+.hero h1 span {
+    color: #e8bd70;
+}
+
+.hero-description {
+    font-size: 18px;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+
+/* =================================
+   4. BUTTONS
+================================= */
+
+.button {
+    display: inline-block;
+    background-color: #d49a3a;
+    color: white;
+    padding: 13px 25px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #b77b23;
+}
+
+
+/* =================================
+   5. COURSE SECTION
+================================= */
+
+.courses {
+    padding: 75px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+.section-heading h2,
+.about h2 {
+    color: #153b66;
+    font-size: 32px;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
+
+.course-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    border-top: 4px solid #d49a3a;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 22px rgba(0,0,0,0.12);
+}
+
+.course-card h3 {
+    font-size: 38px;
+    color: #153b66;
+    margin: 0;
+}
+
+.course-card h4 {
+    color: #d49a3a;
+    margin: 5px 0 15px;
+}
+
+.course-card a {
+    color: #153b66;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* =================================
+   6. ABOUT SECTION
+================================= */
+
+.about {
+    background-color: white;
+    padding: 65px 10%;
+    text-align: center;
+}
+
+.about h2 {
+    max-width: 750px;
+    margin: 15px auto;
+}
+
+.about p:last-child {
+    max-width: 750px;
+    margin: auto;
+}
+
+
+/* =================================
+   7. CONTACT SECTION
+================================= */
+
+.contact {
+    background-color: #eaf0f6;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.contact h2 {
+    color: #153b66;
+    font-size: 30px;
+}
+
+
+/* =================================
+   8. FOOTER
+================================= */
+
+footer {
+    background-color: #153b66;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* =================================
+   9. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .course-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+    }
+
+    .hero {
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 31px;
+    }
+
+    .section-heading h2 {
+        font-size: 26px;
+    }
+
+}
+
+
+/* =================================
+   ABOUT SECTION WITH IMAGE
+================================= */
+
+.about {
+    background-color: white;
+    padding: 70px 8%;
+
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.about-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-content h2 {
+    color: #153b66;
+    font-size: 32px;
+}
+
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 700px) {
+
+    .about {
+        flex-direction: column;
+        padding: 45px 7%;
+        gap: 25px;
+    }
+
+    .about-image {
+        width: 100%;
+    }
+
+    .about-image img {
+        height: 260px;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+}
