@@ -1,7 +1,5 @@
 
-/* =================================
-   1. GENERAL SETTINGS
-================================= */
+/* GENERAL SETTINGS */
 
 * {
     box-sizing: border-box;
@@ -19,11 +17,7 @@ body {
     line-height: 1.7;
 }
 
-
-
-/* =================================
-   PROFESSIONAL HEADER
-================================= */
+/* HEADER */
 
 .site-header {
     background-color: white;
@@ -31,6 +25,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
     box-shadow: 0 2px 10px rgba(0,0,0,0.06);
     position: sticky;
     top: 0;
@@ -44,6 +39,7 @@ body {
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    flex-shrink: 0;
 }
 
 .logo-ma {
@@ -70,7 +66,29 @@ body {
     color: #d49a3a;
 }
 
-/* DESKTOP NAVIGATION */
+/* LANGUAGE SWITCHER */
+
+.language-switcher {
+    display: flex;
+    gap: 5px;
+}
+
+.language-switcher button {
+    background: white;
+    border: 1px solid #153b66;
+    color: #153b66;
+    padding: 7px 13px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.language-switcher button.active {
+    background: #153b66;
+    color: white;
+}
+
+/* NAVIGATION */
 
 .site-nav {
     display: flex;
@@ -89,7 +107,7 @@ body {
     color: #d49a3a;
 }
 
-/* HAMBURGER BUTTON */
+/* HAMBURGER MENU */
 
 .menu-toggle {
     display: none;
@@ -100,72 +118,31 @@ body {
     cursor: pointer;
 }
 
-
-/* MOBILE NAVIGATION */
-
-@media (max-width: 700px) {
-
-    .site-header {
-        flex-wrap: wrap;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .site-nav {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        padding: 20px 0;
-        gap: 18px;
-    }
-
-    .site-nav.open {
-        display: flex;
-    }
-
-}
-
-/* =================================
-   3. HERO SECTION
-================================= */
+/* HERO SECTION */
 
 
-/* =================================
-   HERO SECTION WITH BACKGROUND IMAGE
-================================= */
+/* HERO SECTION WITH BACKGROUND IMAGE */
 
 .hero {
-
     min-height: 550px;
 
-    background-image:
+    background:
         linear-gradient(
-            rgba(15, 35, 60, 0.75),
-            rgba(15, 35, 60, 0.75)
+            rgba(10, 25, 45, 0.70),
+            rgba(10, 25, 45, 0.70)
         ),
         url("images/hero-classroom.jpg");
 
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
 
     color: white;
 
     display: flex;
-
     align-items: center;
 
     padding: 70px 10%;
-
-}
-
-.hero-content {
-    max-width: 750px;
 }
 
 
@@ -182,12 +159,13 @@ body {
 
 .hero h1 {
     font-size: 46px;
-    line-height: 1.2;
+    line-height: 1.4;
     margin: 20px 0;
 }
 
-.hero h1 span {
+.highlight {
     color: #e8bd70;
+    display: block;
 }
 
 .hero-description {
@@ -196,10 +174,7 @@ body {
     margin-bottom: 30px;
 }
 
-
-/* =================================
-   4. BUTTONS
-================================= */
+/* BUTTONS */
 
 .button {
     display: inline-block;
@@ -216,10 +191,7 @@ body {
     background-color: #b77b23;
 }
 
-
-/* =================================
-   5. COURSE SECTION
-================================= */
+/* COURSES */
 
 .courses {
     padding: 75px 7%;
@@ -276,10 +248,7 @@ body {
     text-decoration: none;
 }
 
-
-/* =================================
-   6. ABOUT SECTION
-================================= */
+/* ABOUT */
 
 .about {
     background-color: white;
@@ -297,10 +266,7 @@ body {
     margin: auto;
 }
 
-
-/* =================================
-   7. CONTACT SECTION
-================================= */
+/* CONTACT */
 
 .contact {
     background-color: #eaf0f6;
@@ -313,10 +279,7 @@ body {
     font-size: 30px;
 }
 
-
-/* =================================
-   8. FOOTER
-================================= */
+/* FOOTER */
 
 footer {
     background-color: #153b66;
@@ -325,20 +288,65 @@ footer {
     padding: 20px;
 }
 
+/* PERSIAN / RTL SETTINGS */
 
-/* =================================
-   9. RESPONSIVE DESIGN
-================================= */
+html[dir="rtl"] body {
+    direction: rtl;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+html[dir="rtl"] .site-header {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .logo {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .logo-text {
+    text-align: right;
+}
+
+html[dir="rtl"] .site-nav {
+    flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .hero {
+    text-align: right;
+}
+
+html[dir="rtl"] .hero-content {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+html[dir="rtl"] .subtitle {
+    letter-spacing: 0;
+}
+
+html[dir="rtl"] .course-card {
+    text-align: right;
+    border-top: none;
+    border-right: 4px solid #d49a3a;
+}
+
+html[dir="rtl"] .course-card a {
+    display: inline-block;
+}
+
+html[dir="rtl"] .section-heading,
+html[dir="rtl"] .about,
+html[dir="rtl"] .contact,
+html[dir="rtl"] footer {
+    text-align: center;
+}
+
+/* TABLETS */
 
 @media (max-width: 850px) {
 
-    header {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    nav a {
-        margin: 0 10px;
+    .site-header {
+        flex-wrap: wrap;
     }
 
     .course-container {
@@ -350,16 +358,49 @@ footer {
     }
 }
 
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .site-nav {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        padding: 20px 0;
+        gap: 18px;
+    }
+
+    .site-nav.open {
+        display: flex;
+    }
+
+    html[dir="rtl"] .site-nav {
+        align-items: flex-end;
+    }
+
+    .site-header {
+        gap: 12px;
+    }
+
+    .language-switcher {
+        margin-left: auto;
+    }
+
+    html[dir="rtl"] .language-switcher {
+        margin-left: 0;
+        margin-right: auto;
+    }
+}
 
 @media (max-width: 550px) {
 
     .course-container {
         grid-template-columns: 1fr;
-    }
-
-    nav a {
-        display: inline-block;
-        margin: 5px;
     }
 
     .hero {
@@ -374,64 +415,11 @@ footer {
         font-size: 26px;
     }
 
-}
-
-
-/* =================================
-   ABOUT SECTION WITH IMAGE
-================================= */
-
-.about {
-    background-color: white;
-    padding: 70px 8%;
-
-    display: flex;
-    align-items: center;
-    gap: 50px;
-}
-
-.about-image {
-    flex: 1;
-}
-
-.about-image img {
-    width: 100%;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-}
-
-.about-content {
-    flex: 1;
-    text-align: left;
-}
-
-.about-content h2 {
-    color: #153b66;
-    font-size: 32px;
-}
-
-
-/* MOBILE RESPONSIVENESS */
-
-@media (max-width: 700px) {
-
-    .about {
-        flex-direction: column;
-        padding: 45px 7%;
-        gap: 25px;
+    .logo-text strong {
+        font-size: 16px;
     }
 
-    .about-image {
-        width: 100%;
+    .logo-text small {
+        font-size: 10px;
     }
-
-    .about-image img {
-        height: 260px;
-    }
-
-    .about-content {
-        text-align: center;
-    }
-
 }

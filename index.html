@@ -1,6 +1,6 @@
- 
+
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -13,71 +13,100 @@
 
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- HEADER -->
+    <header class="site-header">
 
-   
-<header class="site-header">
+        <a href="#home" class="logo">
+            <span class="logo-ma">MA</span>
 
-    <!-- LOGO -->
+            <span class="logo-text">
+                <strong>MA Sprachschule</strong>
+                <small data-de="Lernen Sie Deutsch bei MA"
+                       data-fa="آلمانی را با MA بیاموزید">
+                    Lernen Sie Deutsch bei MA
+                </small>
+            </span>
+        </a>
 
-    <a href="#home" class="logo">
-        <span class="logo-ma">MA</span>
+        <!-- LANGUAGE SWITCHER -->
+        <div class="language-switcher">
+            <button id="lang-de" class="active">DE</button>
+            <button id="lang-fa">فارسی</button>
+        </div>
 
-        <span class="logo-text">
-            <strong>Sprachschule</strong>
-            <small>زبان آلمانی را با ما یاد بگیرید</small>
-        </span>
-    </a>
+        <!-- MOBILE MENU -->
+        <button class="menu-toggle"
+                id="menu-toggle"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+                aria-controls="main-nav">
+            ☰
+        </button>
 
+        <!-- NAVIGATION -->
+        <nav class="site-nav" id="main-nav">
 
-    <!-- MOBILE MENU BUTTON -->
+            <a href="#home"
+               data-de="Startseite"
+               data-fa="صفحه اصلی">Startseite</a>
 
-    <button class="menu-toggle"
-            id="menu-toggle"
-            aria-label="Menü öffnen"
-            aria-expanded="false"
-            aria-controls="main-nav">
+            <a href="#courses"
+               data-de="Kurse"
+               data-fa="دوره‌ها">Kurse</a>
 
-        ☰
+            <a href="#about"
+               data-de="Über uns"
+               data-fa="درباره ما">Über uns</a>
 
-    </button>
+            <a href="#contact"
+               data-de="Kontakt"
+               data-fa="تماس با ما">Kontakt</a>
 
+        </nav>
 
-    <!-- NAVIGATION -->
-
-    <nav class="site-nav" id="main-nav">
-
-        <a href="#home">Startseite</a>
-        <a href="#courses">Kurse</a>
-        <a href="#about">Über uns</a>
-        <a href="#contact">Kontakt</a>
-
-    </nav>
-
-</header>
-
+    </header>
 
 
     <!-- HERO SECTION -->
-
     <section class="hero" id="home">
 
         <div class="hero-content">
 
-            <p class="subtitle">WILLKOMMEN BEI MA SPRACHSCHULE</p>
-
-            <h1>
-                Entdecken Sie die Welt
-                <span>der deuschen Sprache. </span>
-            </h1>
-
-            <p class="hero-description">
-                Lernen Sie Deutsch mit erfahrenen Lehrkräften,
-                modernen Lernmethoden und hochwertigen Lernmaterialien.
+            <p class="subtitle"
+               data-de="WILLKOMMEN BEI MA SPRACHSCHULE"
+               data-fa="به آموزشگاه زبان MA خوش آمدید">
+                WILLKOMMEN BEI MA SPRACHSCHULE
             </p>
 
-            <a href="#courses" class="button">
+            <h1>
+                <span data-de="Entdecken Sie die Welt"
+                      data-fa="دنیای زبان آلمانی را">
+                    Entdecken Sie die Welt
+                </span>
+
+                <span class="highlight"
+                      data-de="der deutschen Sprache."
+                      data-fa="کشف کنید.">
+                    der deutschen Sprache.
+                </span>
+            </h1>
+
+            <p class="hero-description"
+               data-de="Lernen Sie Deutsch mit erfahrenen Lehrkräften, modernen Lernmethoden und hochwertigen Lernmaterialien."
+               data-fa="زبان آلمانی را با استادان باتجربه، روش‌های آموزشی مدرن و منابع آموزشی باکیفیت بیاموزید.">
+
+                Lernen Sie Deutsch mit erfahrenen Lehrkräften,
+                modernen Lernmethoden und hochwertigen Lernmaterialien.
+
+            </p>
+
+            <a href="#courses"
+               class="button"
+               data-de="Unsere Kurse entdecken"
+               data-fa="مشاهده دوره‌های آموزشی">
+
                 Unsere Kurse entdecken
+
             </a>
 
         </div>
@@ -85,19 +114,36 @@
     </section>
 
 
-    <!-- COURSES SECTION -->
-
+    <!-- MAIN CONTENT -->
     <main>
 
+        <!-- COURSES -->
         <section id="courses" class="courses">
 
             <div class="section-heading">
-                <p class="subtitle">UNSER KURSANGEBOT</p>
-                <h2>Finden Sie Ihren passenden Deutschkurs</h2>
-                <p>
-                    Von den ersten Schritten bis zu fortgeschrittenen
-                    Deutschkenntnissen.
+
+                <p class="subtitle"
+                   data-de="UNSER KURSANGEBOT"
+                   data-fa="دوره‌های آموزشی ما">
+                    UNSER KURSANGEBOT
                 </p>
+
+                <h2
+                    data-de="Finden Sie Ihren passenden Deutschkurs"
+                    data-fa="دوره مناسب زبان آلمانی خود را پیدا کنید">
+
+                    Finden Sie Ihren passenden Deutschkurs
+
+                </h2>
+
+                <p
+                    data-de="Von den ersten Schritten bis zu fortgeschrittenen Deutschkenntnissen."
+                    data-fa="از نخستین قدم‌ها تا رسیدن به سطوح پیشرفته زبان آلمانی.">
+
+                    Von den ersten Schritten bis zu fortgeschrittenen Deutschkenntnissen.
+
+                </p>
+
             </div>
 
 
@@ -105,41 +151,116 @@
 
                 <article class="course-card">
                     <h3>A1</h3>
-                    <h4>Anfänger</h4>
-                    <p>Erlernen Sie die Grundlagen der deutschen Sprache.</p>
-                    <a href="#contact">Mehr erfahren →</a>
+
+                    <h4 data-de="Anfänger"
+                        data-fa="مبتدی">
+                        Anfänger
+                    </h4>
+
+                    <p data-de="Erlernen Sie die Grundlagen der deutschen Sprache."
+                       data-fa="با اصول اولیه زبان آلمانی آشنا شوید.">
+
+                        Erlernen Sie die Grundlagen der deutschen Sprache.
+
+                    </p>
+
+                    <a href="#contact"
+                       data-de="Mehr erfahren →"
+                       data-fa="اطلاعات بیشتر ←">
+                        Mehr erfahren →
+                    </a>
                 </article>
 
 
                 <article class="course-card">
                     <h3>A2</h3>
-                    <h4>Grundkenntnisse</h4>
-                    <p>Erweitern Sie Ihren Wortschatz und Ihre Grammatik.</p>
-                    <a href="#contact">Mehr erfahren →</a>
+
+                    <h4 data-de="Grundkenntnisse"
+                        data-fa="مقدماتی">
+                        Grundkenntnisse
+                    </h4>
+
+                    <p data-de="Erweitern Sie Ihren Wortschatz und Ihre Grammatik."
+                       data-fa="دایره واژگان و دانش گرامری خود را گسترش دهید.">
+
+                        Erweitern Sie Ihren Wortschatz und Ihre Grammatik.
+
+                    </p>
+
+                    <a href="#contact"
+                       data-de="Mehr erfahren →"
+                       data-fa="اطلاعات بیشتر ←">
+                        Mehr erfahren →
+                    </a>
                 </article>
 
 
                 <article class="course-card">
                     <h3>B1</h3>
-                    <h4>Mittelstufe</h4>
-                    <p>Kommunizieren Sie selbstständiger im Alltag.</p>
-                    <a href="#contact">Mehr erfahren →</a>
+
+                    <h4 data-de="Mittelstufe"
+                        data-fa="متوسط">
+                        Mittelstufe
+                    </h4>
+
+                    <p data-de="Kommunizieren Sie selbstständiger im Alltag."
+                       data-fa="در موقعیت‌های روزمره مستقل‌تر ارتباط برقرار کنید.">
+
+                        Kommunizieren Sie selbstständiger im Alltag.
+
+                    </p>
+
+                    <a href="#contact"
+                       data-de="Mehr erfahren →"
+                       data-fa="اطلاعات بیشتر ←">
+                        Mehr erfahren →
+                    </a>
                 </article>
 
 
                 <article class="course-card">
                     <h3>B2</h3>
-                    <h4>Fortgeschrittene</h4>
-                    <p>Verbessern Sie Ihre Sprachkompetenz auf höherem Niveau.</p>
-                    <a href="#contact">Mehr erfahren →</a>
+
+                    <h4 data-de="Fortgeschrittene"
+                        data-fa="پیشرفته">
+                        Fortgeschrittene
+                    </h4>
+
+                    <p data-de="Verbessern Sie Ihre Sprachkompetenz auf höherem Niveau."
+                       data-fa="مهارت‌های زبانی خود را به سطح بالاتری ارتقا دهید.">
+
+                        Verbessern Sie Ihre Sprachkompetenz auf höherem Niveau.
+
+                    </p>
+
+                    <a href="#contact"
+                       data-de="Mehr erfahren →"
+                       data-fa="اطلاعات بیشتر ←">
+                        Mehr erfahren →
+                    </a>
                 </article>
 
 
                 <article class="course-card">
                     <h3>C1</h3>
-                    <h4>Kompetente Sprachverwendung</h4>
-                    <p>Erreichen Sie ein hohes Niveau der Sprachbeherrschung.</p>
-                    <a href="#contact">Mehr erfahren →</a>
+
+                    <h4 data-de="Kompetente Sprachverwendung"
+                        data-fa="تسلط پیشرفته">
+                        Kompetente Sprachverwendung
+                    </h4>
+
+                    <p data-de="Erreichen Sie ein hohes Niveau der Sprachbeherrschung."
+                       data-fa="به سطح بالایی از تسلط بر زبان آلمانی دست یابید.">
+
+                        Erreichen Sie ein hohes Niveau der Sprachbeherrschung.
+
+                    </p>
+
+                    <a href="#contact"
+                       data-de="Mehr erfahren →"
+                       data-fa="اطلاعات بیشتر ←">
+                        Mehr erfahren →
+                    </a>
                 </article>
 
             </div>
@@ -147,52 +268,62 @@
         </section>
 
 
-        <!-- ABOUT SECTION -->
+        <!-- ABOUT US -->
+        <section id="about" class="about">
 
-       
-<section id="about" class="about">
-
-    <div class="about-image">
-
-        <img
-            src="images/classroom.jpg"
-            alt="Deutschunterricht bei MA Sprachschule"
-        >
-
-    </div>
-
-    <div class="about-content">
-
-        <p class="subtitle">ÜBER MA SPRACHSCHULE</p>
-
-        <h2>Deutsch lernen mit Qualität und Leidenschaft</h2>
-
-        <p>
-            Wir begleiten unsere Lernenden auf ihrem Weg
-            zu besseren Deutschkenntnissen. Mit strukturiertem
-            Unterricht, praktischen Übungen und individueller
-            Unterstützung machen wir das Lernen effektiver.
-        </p>
-
-    </div>
-
-</section>
-
-
-
-        <!-- CONTACT SECTION -->
-
-        <section id="contact" class="contact">
-
-            <h2>Bereit, Deutsch zu lernen?</h2>
-
-            <p>
-                Kontaktieren Sie uns und erfahren Sie mehr
-                über unsere Deutschkurse.
+            <p class="subtitle"
+               data-de="ÜBER MA SPRACHSCHULE"
+               data-fa="درباره آموزشگاه زبان MA">
+                ÜBER MA SPRACHSCHULE
             </p>
 
-            <a href="mailto:info@example.com" class="button">
+            <h2
+                data-de="Deutsch lernen mit Qualität und Leidenschaft"
+                data-fa="آموزش زبان آلمانی با کیفیت و علاقه">
+
+                Deutsch lernen mit Qualität und Leidenschaft
+
+            </h2>
+
+            <p
+                data-de="Wir begleiten unsere Lernenden auf ihrem Weg zu besseren Deutschkenntnissen. Mit strukturiertem Unterricht, praktischen Übungen und individueller Unterstützung machen wir das Lernen effektiver."
+                data-fa="ما زبان‌آموزان خود را در مسیر یادگیری زبان آلمانی همراهی می‌کنیم. با آموزش منظم، تمرین‌های کاربردی و پشتیبانی فردی، یادگیری را مؤثرتر می‌سازیم.">
+
+                Wir begleiten unsere Lernenden auf ihrem Weg
+                zu besseren Deutschkenntnissen.
+
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT -->
+        <section id="contact" class="contact">
+
+            <h2
+                data-de="Bereit, Deutsch zu lernen?"
+                data-fa="آماده یادگیری زبان آلمانی هستید؟">
+
+                Bereit, Deutsch zu lernen?
+
+            </h2>
+
+            <p
+                data-de="Kontaktieren Sie uns und erfahren Sie mehr über unsere Deutschkurse."
+                data-fa="با ما تماس بگیرید و درباره دوره‌های زبان آلمانی بیشتر بدانید.">
+
+                Kontaktieren Sie uns und erfahren Sie mehr
+                über unsere Deutschkurse.
+
+            </p>
+
+            <a href="mailto:info@example.com"
+               class="button"
+               data-de="Kontakt aufnehmen"
+               data-fa="تماس با ما">
+
                 Kontakt aufnehmen
+
             </a>
 
         </section>
@@ -201,9 +332,16 @@
 
 
     <!-- FOOTER -->
-
     <footer>
-        <p>© 2026 MA Sprachschule | Lernen Sie Deutsch bei MA.</p>
+
+        <p
+            data-de="© 2026 MA Sprachschule | Lernen Sie Deutsch bei MA."
+            data-fa="© ۲۰۲۶ آموزشگاه زبان MA | آلمانی را با MA بیاموزید.">
+
+            © 2026 MA Sprachschule | Lernen Sie Deutsch bei MA.
+
+        </p>
+
     </footer>
 
 
